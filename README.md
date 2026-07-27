@@ -2,6 +2,10 @@
 
 A minimal Chrome extension that automatically switches YouTube videos to cinema (theatre) mode.
 
+## Why?
+
+By default, Youtube shows a list of recommended videos to the right of the video you're watching. This can be a distraction when wanting to focus. Cinema mode hides the list without the need for full screen.
+
 ## How it works
 
 A content script runs on YouTube watch pages. Instead of simulating a "T" keypress (which is a blind toggle and could accidentally switch theatre mode *off*), it checks the page state via the `theater` attribute on the `<ytd-watch-flexy>` element and, only if theatre mode is not already active, clicks YouTube's own size button (`.ytp-size-button`).
